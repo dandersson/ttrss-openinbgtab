@@ -27,7 +27,7 @@ class OpenInBgTab extends Plugin {
 	}
 
 	function hook_hotkey_map($hotkeys) {
-		//Use the new target 'open_in_background_tab' to define your
+		//Use the new target "open_in_background_tab" to define your
 		//own hotkey to this function in other plugins.
 		$hotkeys['*o']= 'open_in_background_tab';
 

@@ -41,17 +41,26 @@ class OpenInBgTab extends Plugin {
 		//the "Article" section.
 		//$hotkeys[__("Article")]["open_in_background_tab"] = __("Open in background tab (Chrome/Opera only)");
 
-		//This will insert the description at place 7 in the "Article" 
-		//section, which makes sense since it is directly below 
-		//"open_in_new_window". One might want to be able to use 
-		//array_splice() for this, but as it says in the function docs
+		//This will insert the description at the place after 
+		//"open_in_new_window" in the "Article" section. One might want 
+		//to be able to use array_splice() for this, but as it says in 
+		//the function docs
 		//<http://se2.php.net/manual/en/function.array-splice.php>:
 		//"Note that keys in replacement array are not preserved.", 
 		//which makes it useless here.
 		//
-		//Instead I use array_slice() to concatenate original index 
-		//0–7, my entry and original index 7–[end] and return this.
-		$offset = 7;
+		//Instead I use `array_slice()` to concatenate original index 
+		//0–[place of previous key], my entry and original index [place 
+		//of previous key]–[end] and return this.
+		//
+		//Using `array_search()` instead of a static offset from 
+		//looking at the trunk file declarations will enable multiple 
+		//plugins to add their descriptions without confusion along the 
+		//way.
+		//
+		//Add 1 to `$offset` to add _after_ specified search key. Skip 
+		//this to insert before.
+		$offset = 1 + array_search('open_in_new_window', array_keys($hotkeys[__('Article')]));
 		$hotkeys[__('Article')] =
 			array_slice($hotkeys[__('Article')], 0, $offset, true) +
 			array('open_in_background_tab' => __('Open in background tab (Chrome/Opera only)')) +

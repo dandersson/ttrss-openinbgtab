@@ -6,7 +6,7 @@ Since this is the first plugin that uses the `HOOK_HOTKEY_INFO` hook, I've comme
 
 Requirements
 ------------
-TT-RSS ≥1.7.6 (really TT-RSS ≥ <https://github.com/gothfox/Tiny-Tiny-RSS/commit/f9df3e698c8fb839cf0aa8bfbaf316a2bda13e74>)
+TT-RSS ≥1.7.6.
 
 Upstream
 --------

@@ -8,7 +8,7 @@ Requirements
 ------------
 TT-RSS ≥1.7.6.
 
-For TT-RSS ≤1.7.9, use v1.1 of this plugin since the TT-RSS plugin API changed slightly at that point (it's just a single line in the plugin that was removed, so it would be easy to manually "backport" for that matter).
+For TT-RSS ≤1.7.9, use v1.1 of this plugin since the TT-RSS plugin API changed slightly at that point (a single line in the plugin was removed and a backwards compatible `api_version()` function for future API version checks were added; would be easy to manually "backport" for that matter).
 
 Upstream
 --------

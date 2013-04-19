@@ -15,7 +15,6 @@ class OpenInBgTab extends Plugin {
 
 	function init($host) {
 		//Boiler-plate to connect to TT-RSS instance and register hooks.
-		$this->link = $host->get_link();
 		$this->host = $host;
 
 		$host->add_hook($host::HOOK_HOTKEY_MAP, $this);

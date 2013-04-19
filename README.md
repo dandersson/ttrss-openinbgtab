@@ -8,6 +8,8 @@ Requirements
 ------------
 TT-RSS ≥1.7.6.
 
+For TT-RSS ≤1.7.9, use v1.1 of this plugin since the TT-RSS plugin API changed slightly at that point (it's just a single line in the plugin that was removed, so it would be easy to manually "backport" for that matter).
+
 Upstream
 --------
 The project lives at <https://github.com/dandersson/ttrss-openinbgtab>.

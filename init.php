@@ -11,7 +11,7 @@ class OpenInBgTab extends Plugin {
             'Add hotkey to open links in background tab (Chrome/Opera only, TT-RSS >=1.7.6)',
             'dandersson',
             false,
-            'https://github.com/dandersson/ttrss-openinbgtab');
+            'https://github.com/dandersson/ttrss-openinbgtab'];
     }
 
     function init($host) {

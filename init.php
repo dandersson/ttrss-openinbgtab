@@ -14,6 +14,10 @@ class OpenInBgTab extends Plugin {
             'https://github.com/dandersson/ttrss-openinbgtab'];
     }
 
+    function api_version() {
+        return 2;
+    }
+
     function init($host) {
         // Boiler-plate to connect to TT-RSS instance and register hooks.
         $this->host = $host;

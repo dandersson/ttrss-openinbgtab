@@ -1,4 +1,5 @@
 <?php
+
 class OpenInBgTab extends Plugin {
 
     function about() {
@@ -75,4 +76,3 @@ class OpenInBgTab extends Plugin {
         return $hotkeys;
     }
 }
-?>

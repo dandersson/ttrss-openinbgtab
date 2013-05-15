@@ -7,12 +7,12 @@ class OpenInBgTab extends Plugin {
         // functions and corresponding hotkeys and descriptions.
 
         // [version, description, author, is_system_plugin, link to more info]
-        return [
+        return array(
             1.2,
             'Add hotkey to open links in background tab (Chrome/Opera only)',
             'dandersson',
             false,
-            'https://github.com/dandersson/ttrss-openinbgtab'];
+            'https://github.com/dandersson/ttrss-openinbgtab');
     }
 
     function api_version() {

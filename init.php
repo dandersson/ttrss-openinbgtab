@@ -8,7 +8,7 @@ class OpenInBgTab extends Plugin {
 
         // [version, description, author, is_system_plugin, link to more info]
         return array(
-            1.2,
+            1.3,
             'Add hotkey to open links in background tab (Chrome/Opera only)',
             'dandersson',
             false,

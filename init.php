@@ -39,6 +39,7 @@ class OpenInBgTab extends Plugin {
         // Use the new target "open_in_background_tab" to define your own 
         // hotkey to this function in other plugins.
         $hotkeys['*o'] = 'open_in_background_tab';
+        $hotkeys['*p'] = 'open_unread_in_background_tabs';
 
         return $hotkeys;
     }
@@ -71,6 +72,7 @@ class OpenInBgTab extends Plugin {
         $hotkeys[__('Article')] =
             array_slice($hotkeys[__('Article')], 0, $offset, true) +
             array('open_in_background_tab' => __('Open in background tab (Chrome/Opera only)')) +
+            array('open_unread_in_background_tabs' => __('Open unread articles in background tabs (Chrome/Opera only)')) +
             array_slice($hotkeys[__('Article')], $offset, NULL, true);
 
         return $hotkeys;

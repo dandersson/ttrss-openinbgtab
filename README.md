@@ -4,6 +4,8 @@ This [Tiny Tiny RSS](http://tt-rss.org/) plugin will register a new action that 
 
 Since this is the first plugin that uses the `HOOK_HOTKEY_INFO` hook, I've commented everything rigorously in case anyone wants a sample implementation of this functionality.
 
+Some additional functionality was added that registers another action with corresponding hotkey that opens all unread articles in the current view in background tabs and marks them as read. In Chrome, this requires explicit permission to be given for the TT-RSS instance domain to open pop-ups whenever multiple tabs are to be opened. Until this permission is given, Chrome will hide the tabs under a "Blocked pop-up windows" icon in the address bar. Chrome will prompt regarding this when the hotkey is triggered and tries to open multiple tabs.
+
 Requirements
 ------------
 TT-RSS ≥1.7.6.

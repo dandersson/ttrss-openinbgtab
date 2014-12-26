@@ -18,9 +18,10 @@ function openArticleInBackgroundTab(id) {
   a.target = '_blank';
   a.href = 'backend.php?op=article&method=redirect&id=' + id;
   var evt = document.createEvent('MouseEvents');
+  var isMac = navigator.platform.toUpperCase().indexOf('MAC')>=0;
   // <https://developer.mozilla.org/en/docs/DOM/event.initMouseEvent>
   evt.initMouseEvent('click', true, true, window, 0, 0, 0, 0, 0, true, false,
-                     false, false, 0, null);
+                     false, isMac, 0, null);
   a.dispatchEvent(evt);
 }
 
